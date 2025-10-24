@@ -12,6 +12,8 @@ import json
 import requests
 from datetime import datetime
 from stix2 import Indicator, Bundle
+from datetime import UTC
+
 
 # === CONFIGURAZIONE ===
 CONFIG_PATH = "../config.json"
@@ -19,7 +21,7 @@ OUTPUT_DIR = "../feeds/processed"
 OTX_URL = "https://otx.alienvault.com/api/v1/pulses/subscribed"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M")
+timestamp = datetime.now(UTC).strftime("%Y%m%d_%H%M")
 
 def load_api_key():
     """Carica la API key dal file config.json."""
