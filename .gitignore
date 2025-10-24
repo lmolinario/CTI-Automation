@@ -1,0 +1,45 @@
+# ============================================================
+#  .gitignore – CTI-Automation Project
+#  Author: Lello Molinario
+#  Description:
+#   File di esclusione Git per pipeline OSINT e CTI
+#   Evita il versionamento di log, cache, API key e output sensibili.
+# ============================================================
+
+# --- Python cache / virtual env ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+*.egg-info/
+.eggs/
+
+# --- Notebook temporanei ---
+.ipynb_checkpoints/
+
+# --- Log e feed generati automaticamente ---
+/logs/
+feeds/processed/*.json
+*.log
+
+# --- File di configurazione sensibili ---
+config.json
+.env
+
+# --- Dati temporanei / sessioni Telethon ---
+session_cti*
+*.session
+*.session-journal
+
+# --- File di sistema / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Backup / export ---
+*.zip
+*.tar
+*.gz

@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  misp:
+    image: harvarditsecurity/misp
+    ports:
+      - "8080:80"
+    environment:
+      - MYSQL_ROOT_PASSWORD=misp_pass
+  opencti:
+    image: opencti/platform
+    ports:
+      - "8081:8080"

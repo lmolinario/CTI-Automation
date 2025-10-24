@@ -1,9 +1,26 @@
+# ============================================================
+#  requirements.txt – CTI-Automation
+#  Author: Lello Molinario
+#  Description:
+#   Dipendenze Python per la pipeline OSINT e Threat Intelligence
+# ============================================================
+
+# --- Networking / API ---
 requests
 pandas
-stix2
 beautifulsoup4
+python-dotenv
+
+# --- Threat Intelligence & STIX ---
+stix2
+
+# --- Telegram Integration ---
+telethon
+python-telegram-bot
+
+# --- AI / NLP (per futuri moduli di analisi semantica) ---
 spacy
 transformers
-jupyter
-requests
-stix2
+
+# --- Utility ---
+tqdm
