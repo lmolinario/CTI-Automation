@@ -1,0 +1,7 @@
+requests
+pandas
+stix2
+beautifulsoup4
+spacy
+transformers
+jupyter
