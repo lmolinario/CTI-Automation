@@ -1,6 +1,6 @@
 # 🛰️ CTI-Automation
 Repository di automazione OSINT e Threat Intelligence sviluppata da **Lello Molinario**  
-Profilo: Digital Forensics & AI Security | Procura della Repubblica di Sassari
+Profilo: Digital Forensics & AI Security | 
 
 ## 🎯 Obiettivo
 Creare una pipeline automatizzata per la raccolta, normalizzazione e analisi di indicatori di compromissione (IoC) provenienti da fonti OSINT, Dark Web e Telegram.
