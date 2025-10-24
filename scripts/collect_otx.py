@@ -14,6 +14,21 @@ from datetime import datetime
 from stix2 import Indicator, Bundle
 from datetime import UTC
 
+import os
+from dotenv import load_dotenv
+
+# === Carica configurazione proxy da .env ===
+load_dotenv()
+
+http_proxy = os.getenv("HTTP_PROXY")
+https_proxy = os.getenv("HTTPS_PROXY")
+
+if http_proxy and https_proxy:
+    os.environ["HTTP_PROXY"] = http_proxy
+    os.environ["HTTPS_PROXY"] = https_proxy
+    print(f"[i] Proxy configurato: {https_proxy}")
+else:
+    print("[i] Nessun proxy configurato, connessione diretta.")
 
 # === CONFIGURAZIONE ===
 CONFIG_PATH = "../config.json"
@@ -74,7 +89,7 @@ def extract_iocs(pulses):
                 description=f"Indicator from OTX ({i_type})",
                 pattern=pattern,
                 pattern_type="stix",
-                valid_from=datetime.utcnow()
+                valid_from=datetime.now(UTC)
             )
             iocs.append(ioc)
 
